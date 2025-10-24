@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="gallery-animations.css">
-    <link rel="stylesheet" href="gallery-boxes.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/gallery-animations.css">
+    <link rel="stylesheet" href="../css/gallery-boxes.css">
 </head>
 <body>
 
@@ -28,31 +28,17 @@
         </div>
     </div>
 
-    <!-- Main Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light header-navbar sticky-top">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto header-left">
-                    <li class="nav-item">
-                        <a class="nav-link" href="pasha.html">PASHA</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#journey">Journey</a>
-                    </li>
-                </ul>
-                <a class="navbar-brand mx-auto text-center header-brand" href="#home">Muhammad Munaf majeed</a>
-                <ul class="navbar-nav ms-auto header-right">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#event">Event</a>
-                    </li>
-                </ul>
+    <!-- Main Navigation -->    
+    <nav class="navbar navbar-light header-navbar sticky-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex">
+                <a class="nav-link me-3" href="pasha.html">PASHA</a>
+                <a class="nav-link" href="#journey">Journey</a>
+            </div>
+            <a class="navbar-brand text-center header-brand m-0" href="#home">Muhammad Munaf Majeed</a>
+            <div class="d-flex">
+                <a class="nav-link me-3" href="#gallery">Gallery</a>
+                <a class="nav-link" href="#event">Event</a>
             </div>
         </div>
     </nav>
@@ -81,7 +67,7 @@
         <div class="container">
             <div class="row align-items-center gy-4">
                 <div class="col-lg-5">
-                    <img src="IMG-20250326-WA0036 (1).jpg" alt="Munaf Majeed" class="journey-image d-block mx-auto">
+                    <img src="../images/IMG-20250326-WA0036 (1).jpg" alt="Muhammad Munaf Majeed" class="journey-image d-block mx-auto">
                 </div>
                 <div class="col-lg-7">
                     <div class="journey-content">
@@ -89,7 +75,7 @@
                             Hello, I'm Muhammad Munaf Majeed—a relentless problem-solver and hands-on technologist. My passion for IT sparked long before cybersecurity was a buzzword, and my commitment to growth, community, and resilience has only deepened with each project, client, and learning moment.
                         </p>
                         <p class="lead">
-                            My philosophy is simple: knowledge earns value when it is shared. As an advisor and mentor, I channel decades of expertise into nurturing both human capital and technological innovation, making a real impact on lives and the industry. With every challenge, I see an opportunity to build something better, safer, and more inclusive.
+                            My philosophy is simple: knowledge earns value when it is shared. As an advisor and mentor, I channel decades of expertise into nurturing both human capital and technological innovation, making a real impact on lives and the industry.
                         </p>
                         <div class="roles-section">
                             <h4>Life Beyond Tech:</h4>
@@ -115,7 +101,7 @@
         <div class="container">
             <div class="row align-items-center gy-4">
                 <div class="col-lg-5">
-                    <img src="IMG-20250326-WA0036 (1).jpg" alt="Muhammad Munaf Majeed" class="journey-image d-block mx-auto">
+                    <img src="../images/sir-munaf-journey.jpeg" alt="Muhammad Munaf Majeed" class="journey-image d-block mx-auto">
                 </div>
                 <div class="col-lg-7">
                     <div class="journey-content">
@@ -221,12 +207,15 @@
 
                 <!-- Technology Innovation -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="industry-box" data-aos="fade-up" data-aos-delay="500">
-                        <div class="industry-image">
-                            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Innovation" class="img-fluid">
+                    <div class="industry-box digital-transformation-card" data-aos="fade-up" data-aos-delay="500">
+                        <div class="card-content">
+                            <div class="image-wrapper">
+                                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800" alt="Digital Transformation" class="img-fluid">
+                                <div class="arrow-icon"></div>
+                            </div>
+                            <h4>Digital Transformation</h4>
+                            <p>Driving innovation and efficiency across industries by integrating cutting-edge digital technologies.</p>
                         </div>
-                        <h4>Technology Innovation</h4>
-                        <p>Driving technological advancement through innovative solutions and forward-thinking strategies.</p>
                         <div class="industry-hover">
                             <ul>
                                 <li>Digital Transformation</li>
@@ -357,8 +346,8 @@
                         <div class="achievement-dialog left">
                             <h4>Industry Pioneer</h4>
                             <p>Acknowledged as a pioneer in transforming traditional business practices through 
-                               modern methodologies. Leading the industry with innovative solutions and 
-                               forward-thinking strategies in cybersecurity and digital transformation.</p>
+                                modern methodologies. Leading the industry with innovative solutions and 
+                                forward-thinking strategies in cybersecurity and digital transformation.</p>
                         </div>
                     </div>
                 </div>
@@ -418,6 +407,11 @@
                 </div>
             </div>
 
+            <!-- See More Button -->
+            <div class="text-center mt-4">
+                <button id="seeMoreBtn" class="btn btn-primary btn-lg btn-custom d-none">See More</button>
+            </div>
+
             <!-- Loading Spinner -->
             <div class="text-center d-none" id="loadingSpinner">
                 <div class="spinner-border text-primary" role="status">
@@ -429,52 +423,56 @@
                 
 
     <!-- Footer -->
-    <footer class="footer py-3">
+    <footer class="footer py-5">
         <div class="container">
-            <div class="row gy-2">
-                <div class="col-md-4 col-sm-6">
-                    <h6 class="fw-bold mb-2">Sir Munaf Majeed</h6>
-                    <p class="small mb-2">Inspiring growth, fostering leadership, and creating vision.</p>
-                    <div class="social-icons small">
-                        <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="me-2"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-youtube"></i></a>
+            <div class="row gy-4">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="footer-brand mb-3">Muhammad Munaf Majeed</h5>
+                    <p class="footer-text">Inspiring growth, fostering leadership, and creating vision for a better tomorrow.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <h6 class="fw-bold mb-2">Quick Links</h6>
-                    <ul class="list-unstyled small mb-0">
-                        <li class="d-inline-block me-3"><a href="#pasha">PASHA</a></li>
-                        <li class="d-inline-block me-3"><a href="#journey">Journey</a></li>
-                        <li class="d-inline-block me-3"><a href="#about">About</a></li>
-                        <li class="d-inline-block me-3"><a href="#gallery">Gallery</a></li>
-                        <li class="d-inline-block"><a href="#event">Events</a></li>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#pasha" class="footer-link">PASHA</a></li>
+                        <li><a href="#journey" class="footer-link">Journey</a></li>
+                        <li><a href="#about" class="footer-link">About</a></li>
+                        <li><a href="#gallery" class="footer-link">Gallery</a></li>
+                        <li><a href="#event" class="footer-link">Events</a></li>
                     </ul>
                 </div>
-                <div class="col-md-4">
-                    <h6 class="fw-bold mb-2">Contact Info</h6>
-                    <ul class="list-unstyled contact-info small mb-0">
-                        <li class="d-inline-block me-3">
-                            <i class="bi bi-geo-alt-fill me-1"></i>
-                            Karachi, Pakistan
-                        </li>
-                        <li class="d-inline-block me-3">
-                            <i class="bi bi-envelope-fill me-1"></i>
-                            munaf@s4scorp.com
-                        </li>
-                        <li class="d-inline-block">
-                            <i class="bi bi-telephone-fill me-1"></i>
-                            +92 300 1234567
-                        </li>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Contact Info</h5>
+                    <ul class="list-unstyled contact-info">
+                        <li><i class="fas fa-map-marker-alt me-2"></i> Karachi, Pakistan</li>
+                        <li><i class="fas fa-envelope me-2"></i> munaf@s4scorp.com</li>
+                        <li><i class="fas fa-phone me-2"></i> +92 321 2002000</li>
                     </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p class="footer-text">Stay updated with my latest insights and events.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email">
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
                 </div>
             </div>
-            <hr class="my-2" style="border-color: rgba(255,255,255,0.1);">
+            <hr class="my-4 footer-divider">
             <div class="row">
-                <div class="col-12 text-center">
-                    <p class="small mb-0">&copy; 2025 Sir Munaf. All Rights Reserved.</p>
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="copyright-text mb-0">&copy; 2024 Muhammad Munaf Majeed. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="copyright-text mb-0">Designed with <i class="fas fa-heart text-danger"></i> by Trae AI</p>
                 </div>
             </div>
         </div>
@@ -498,7 +496,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
-    <script src="script.js"></script>
-    <script src="gallery-new.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/gallery-new.js"></script>
 </body>
 </html>
